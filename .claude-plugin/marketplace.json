@@ -1,17 +1,36 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "prestashop-experts",
   "owner": {
     "name": "Eduardo Calvo",
     "url": "https://github.com/educlopez"
   },
+  "metadata": {
+    "description": "Eduardo Calvo's PrestaShop expert agents for Claude Code",
+    "version": "0.1.0"
+  },
   "plugins": [
     {
       "name": "prestashop-experts",
-      "source": ".",
+      "source": "./",
       "description": "Two expert agents for PrestaShop freelance work: panda-expert (Panda theme + Easy Builder) and prestashop-expert (PrestaShop 8/9 core). Bundled with a curated knowledge base.",
       "version": "0.1.0",
+      "author": {
+        "name": "Eduardo Calvo"
+      },
       "category": "ecommerce",
-      "tags": ["prestashop", "panda", "sunnytoo", "easy-builder", "smarty", "symfony", "ecommerce", "agent", "freelance"]
+      "homepage": "https://github.com/educlopez/prestashop-experts",
+      "keywords": [
+        "prestashop",
+        "panda",
+        "sunnytoo",
+        "easy-builder",
+        "smarty",
+        "symfony",
+        "ecommerce",
+        "agent",
+        "freelance"
+      ]
     }
   ]
 }

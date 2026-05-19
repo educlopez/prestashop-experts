@@ -7,9 +7,17 @@
     "url": "https://educalvolopez.com"
   },
   "homepage": "https://github.com/educlopez/prestashop-experts",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/educlopez/prestashop-experts.git"
-  },
-  "license": "UNLICENSED"
+  "repository": "https://github.com/educlopez/prestashop-experts",
+  "license": "UNLICENSED",
+  "keywords": [
+    "prestashop",
+    "panda",
+    "sunnytoo",
+    "easy-builder",
+    "smarty",
+    "symfony",
+    "ecommerce",
+    "agent",
+    "freelance"
+  ]
 }

@@ -1,0 +1,17 @@
+{
+  "name": "prestashop-experts",
+  "owner": {
+    "name": "Eduardo Calvo",
+    "url": "https://github.com/educlopez"
+  },
+  "plugins": [
+    {
+      "name": "prestashop-experts",
+      "source": ".",
+      "description": "Two expert agents for PrestaShop freelance work: panda-expert (Panda theme + Easy Builder) and prestashop-expert (PrestaShop 8/9 core). Bundled with a curated knowledge base.",
+      "version": "0.1.0",
+      "category": "ecommerce",
+      "tags": ["prestashop", "panda", "sunnytoo", "easy-builder", "smarty", "symfony", "ecommerce", "agent", "freelance"]
+    }
+  ]
+}

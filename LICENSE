@@ -1,19 +1,43 @@
-Copyright (c) 2026 Eduardo Calvo. All rights reserved.
+MIT License
 
-This software and its bundled knowledge base are proprietary and confidential.
-Access is granted only to authorized collaborators of Eduardo Calvo.
+Copyright (c) 2026 Eduardo Calvo
 
-You may NOT:
-- Redistribute, sublicense, or publish this software or its knowledge base.
-- Use the bundled Easy Builder documentation outside of a properly licensed
-  Easy Builder installation owned by you or your client.
-- Mirror the SunnyToo Panda theme documentation outside of an internal team
-  context with a valid Panda theme license.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-You MAY:
-- Install and use this plugin in your own Claude Code environment for the
-  purpose of building, configuring, or maintaining PrestaShop projects on
-  client engagements where a valid PrestaShop and Panda license applies.
-- Open issues and pull requests on the upstream repository.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-No warranty is provided. Use at your own risk.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Notes on bundled documentation
+
+This repository contains **descriptive documentation** about:
+
+- **PrestaShop 8 and 9** — open-source e-commerce platform, OSL 3.0 licensed.
+  Most `prestashop-kb` content is paraphrased or derived from the public
+  PrestaShop devdocs (https://devdocs.prestashop-project.org).
+- **Panda theme by SunnyToo** — a commercial PrestaShop theme. Documentation
+  in `panda-kb` describes hook registrations, module metadata, and integration
+  patterns based on legitimate, licensed use. **No SunnyToo source code is
+  redistributed.**
+- **Easy Builder by SunnyToo** — a paid add-on. The `panda-kb/easybuilder/`
+  track describes its architecture at a metadata level (controllers names,
+  widget categories, module dependencies). **No SunnyToo source code is
+  redistributed.**
+
+If you are SunnyToo and you would like any specific documentation removed or
+adjusted, please open an issue at
+https://github.com/educlopez/prestashop-experts/issues.

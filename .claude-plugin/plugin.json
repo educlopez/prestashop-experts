@@ -1,6 +1,6 @@
 {
   "name": "prestashop-experts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Two expert agents for PrestaShop freelance work: panda-expert (Panda theme + Easy Builder) and prestashop-expert (PrestaShop 8/9 core: Symfony, Twig BO, Smarty, hooks, themes, modules, migration). Bundled with a curated knowledge base.",
   "author": {
     "name": "Eduardo Calvo",

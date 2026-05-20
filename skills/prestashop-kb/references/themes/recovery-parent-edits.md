@@ -47,15 +47,34 @@ ls themes/                # debe mostrar <parent>/ y <parent>_child/
 
 Si falta el child, créalo mínimo:
 
+> [!info] El nombre del child NO tiene que seguir la convención `<parent>_child`
+> El folder puede llamarse `panda-v2_child`, `mi-tema-custom`, etc. La relación se declara en `config/theme.yml` mediante el campo **`parent:`** (no `parent_theme:`).
+
 ```yaml
-# themes/<parent>_child/config/theme.yml
-name: <parent>_child
-display_name: <Parent> Child
+# themes/<child-name>/config/theme.yml
+name: <child-name>
+display_name: <Child display name>
 version: 1.0.0
+parent: <parent>                # <- campo CORRECTO (no `parent_theme:`)
+use_parent_assets: true         # carga CSS/JS del parent además del child
 author:
   name: <tu-empresa>
   email: dev@tu-empresa.com
-parent_theme: <parent>
+
+meta:
+  compatibility:
+      from: 1.7.1.0
+      to: ~
+
+assets:
+  css:
+    all:
+      - id: theme-custom-css
+        path: assets/css/custom.css
+  js:
+    all:
+      - id: theme-custom-js
+        path: assets/js/custom.js
 ```
 
 ### 3. Confirmar que el shop usa el child, no el parent

@@ -88,7 +88,7 @@ Cuando te invocan estás ejecutándote **dentro de un proyecto PrestaShop client
 │   │   ├── assets/
 │   │   └── modules/                    # module tpls originales
 │   └── panda_child/                    # CHILD theme — aquí viven TODAS las customizaciones
-│       ├── config/theme.yml            # declara `parent_theme: panda`
+│       ├── config/theme.yml            # declara `parent: panda`
 │       ├── assets/
 │       │   ├── css/custom.css
 │       │   └── js/custom.js
@@ -125,7 +125,9 @@ Cuando te invocan estás ejecutándote **dentro de un proyecto PrestaShop client
 **Reglas de acceso al source** (críticas):
 
 1. **CWD primero SIEMPRE**. Busca en `./themes/*/` y `./modules/st*/` del proyecto actual con `Glob` o `ls`.
-2. **Detecta child theme al inicio**: `ls ./themes/` debe mostrar AL MENOS dos carpetas. Identifica el child leyendo cada `config/theme.yml` — el que tenga `parent_theme: panda` (o similar) es el child. Si solo hay `panda/` sin child → **flag al usuario**: "No veo child theme. Antes de customizar, crea uno".
+2. **Detecta child theme al inicio**: `ls ./themes/` debe mostrar AL MENOS dos carpetas. Identifica el child leyendo cada `config/theme.yml` — el campo correcto es **`parent: panda`** (no `parent_theme:`). El theme.yml de un child típico también declara `use_parent_assets: true` y `display_name`. Si solo hay `panda/` sin child → **flag al usuario**: "No veo child theme. Antes de customizar, crea uno".
+
+   **Nota PS 9**: el folder `themes/` también contiene `_core/` (shared JS), `_libraries/` (font-awesome), `classic/`, `hummingbird/`, y archivos sueltos (`debug.tpl`, `javascript.tpl`, `package.json`, `preview-fallback.png`). NO son temas — no los confundas con el child.
 3. **Para leer un template**: busca primero en `./themes/<child>/templates/<path>` y `./themes/<child>/modules/<mod>/views/templates/hook/`. Si existe, ES el que se está sirviendo. Si no, cae al parent.
 4. **Para sugerir una customización**: SIEMPRE instruye sobre el **child theme**. Path del archivo a crear/editar debe empezar por `./themes/<child>/...`, nunca `./themes/panda/...`.
 5. **`./themes/panda/config/theme.yml`** (padre) es autoritativo sobre versión de Panda instalada y layouts disponibles en ESTE proyecto.
@@ -148,6 +150,19 @@ Cuando te invocan estás ejecutándote **dentro de un proyecto PrestaShop client
 2bis. **Nunca propongas editar el theme padre**. Todas las sugerencias de cambio (CSS, JS, tpl overrides) deben apuntar al child theme.
 
 3. **Nunca inventes nombres de módulos u opciones**. Si no lo encuentras en la KB ni en el source, **dilo**: "No tengo evidencia de esa feature en Panda 2.9.2. Posibles caminos: (a) leer source X, (b) probar en instalación local, (c) consultar foro SunnyToo".
+
+3bis. **HOOKS — regla estricta**: cuando recomiendes colocar un módulo en un hook, el hook **DEBE** venir de:
+   - (a) el campo `hooks:` de la fiche del módulo (`panda-kb/modules/stX.md`), O
+   - (b) leído del source del CWD con icono 🔍 y path concreto.
+
+   **PROHIBIDO** inventar hooks plausibles (`displayNavFullWidth`, `displayTop`, `displayFooterBefore`, etc.) sin verificar. Ejemplo real de error a evitar: `stbrandsslider` se registra en `displayHomeBottom` (no `displayFooterBefore`); `stmegamenu` en `displayHeader`/`displayMainMenu`/`displayLeftColumn`/`displaySideBar`/`displayMobileBarLeft` (no `displayNavFullWidth`/`displayTop`).
+
+   Verifica antes de proponer:
+   ```
+   grep "^hooks:" panda-kb/modules/stX.md
+   ```
+
+3ter. **Módulos `st*` que NO son de Panda**: las fiches `stats*` (`statsbestcategories`, `statsbestcustomers`, etc.) son del **core PS**, no de Panda. Si el usuario pregunta por uno de ellos → deriva a `prestashop-expert` o aclara que no es Panda-specific.
 
 4. **Distingue origen de tu info en cada respuesta** (OBLIGATORIO, primera línea):
    - ✅ *Confirmado en fiche o doc KB*

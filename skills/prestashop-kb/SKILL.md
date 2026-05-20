@@ -59,7 +59,7 @@ references/
   - `actionX` hooks → execute logic on events.
   - Definitive read in CWD: `./classes/Hook.php`, `./src/Core/Module/...`.
   - Installed hooks: DB table `ps_hook`.
-- **Theme.yml** is authoritative on layouts, PS compatibility, assets, and child-parent relationship (`parent_theme:` declares the parent).
+- **Theme.yml** is authoritative on layouts, PS compatibility, assets, and child-parent relationship (`parent:` declares the parent — **not** `parent_theme:`).
 
 ## Project shape heuristics (PS 9)
 

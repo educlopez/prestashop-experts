@@ -7,14 +7,14 @@
   },
   "metadata": {
     "description": "Eduardo Calvo's PrestaShop expert agents for Claude Code",
-    "version": "0.1.1"
+    "version": "0.1.2"
   },
   "plugins": [
     {
       "name": "prestashop-experts",
       "source": "./",
       "description": "Two expert agents for PrestaShop freelance work: panda-expert (Panda theme + Easy Builder) and prestashop-expert (PrestaShop 8/9 core). Bundled with a curated knowledge base.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Eduardo Calvo"
       },

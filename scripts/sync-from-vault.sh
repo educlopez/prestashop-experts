@@ -59,7 +59,7 @@ copy_tree() {
 
 # --- panda-expert KB (to stage) ---
 # theme Panda + Easy Builder + scraped docs + module fiches + demos
-for sub in docs modules demos easybuilder forum _agent; do
+for sub in docs modules demos easybuilder forum; do
   if [[ -d "$VAULT_KB/$sub" ]]; then
     mkdir -p "$PANDA_STAGE/$sub"
     copy_tree "$VAULT_KB/$sub" "$PANDA_STAGE/$sub" || echo "  WARN: partial copy on $sub" >&2

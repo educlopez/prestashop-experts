@@ -4,6 +4,13 @@ All notable changes to this project are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Releases are managed automatically by [release-please](https://github.com/googleapis/release-please) from Conventional Commits.
 
+## [0.1.3](https://github.com/educlopez/prestashop-experts/compare/v0.1.2...v0.1.3) (2026-05-20)
+
+
+### Bug Fixes
+
+* **agents:** YAML frontmatter now parses model and color correctly ([5f096aa](https://github.com/educlopez/prestashop-experts/commit/5f096aa879009ab2767a74c3f7020131d3f5752b))
+
 ## [0.1.2] - 2026-05-20
 
 ### Features

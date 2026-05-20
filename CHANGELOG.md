@@ -4,6 +4,24 @@ All notable changes to this project are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Releases are managed automatically by [release-please](https://github.com/googleapis/release-please) from Conventional Commits.
 
+## [0.2.0](https://github.com/educlopez/prestashop-experts/compare/v0.1.3...v0.2.0) (2026-05-20)
+
+
+### Features
+
+* **ci:** add pre-release validation script and GitHub workflow ([74e5a86](https://github.com/educlopez/prestashop-experts/commit/74e5a868716560e1d61cc22eb8ae3d5f4f7bfad4))
+* **commands:** add /panda and /ps slash commands ([f5cc695](https://github.com/educlopez/prestashop-experts/commit/f5cc69590395af7303d4b79870cd9a8e260ed0f2))
+
+
+### Bug Fixes
+
+* **manifest:** set license to MIT in plugin.json ([72797dd](https://github.com/educlopez/prestashop-experts/commit/72797ddb50edeeb7ef2e5d7414828ef6201c56a7))
+
+
+### Documentation
+
+* add CONTRIBUTING guide ([a78f710](https://github.com/educlopez/prestashop-experts/commit/a78f710c351244580f462e624c149e8c16dcf5d6))
+
 ## [0.1.3](https://github.com/educlopez/prestashop-experts/compare/v0.1.2...v0.1.3) (2026-05-20)
 
 
